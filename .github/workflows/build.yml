@@ -54,7 +54,7 @@ jobs:
       - name: Compile Sketch
         run: |
           arduino-cli compile \
-            --fqbn esp32:esp32:esp32 \
+            --fqbn esp32:esp32:esp32dev \
             --output-dir ./build \
             ./esp32-2432S028_video_player.ino
       
