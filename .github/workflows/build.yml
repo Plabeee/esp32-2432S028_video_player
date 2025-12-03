@@ -43,7 +43,7 @@ jobs:
       # (Uncomment and modify this section if your sketch has dependencies)
       - name: Install Libraries
         run: |
-           arduino-cli lib install "DFRobotDFPlayerMini"
+           arduino-cli lib install "GFX Library for Arduino" "JPEGDEC"
       #     arduino-cli lib install "WiFi"
       #     arduino-cli lib install "ArduinoJson"
 
