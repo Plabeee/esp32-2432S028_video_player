@@ -45,7 +45,7 @@ uint8_t *mjpeg_buf;
 uint16_t *output_buf;
 
 // Display global variables
-/ NEW CORRECTED CODE:
+// NEW CORRECTED CODE:
 // Create an SPI instance for the display using the HSPI bus (Pins: SCK=14, MISO=12, MOSI=13, SS=15)
 SPIClass *display_spi = new SPIClass(HSPI);
 
