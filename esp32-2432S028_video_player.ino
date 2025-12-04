@@ -45,7 +45,12 @@ uint8_t *mjpeg_buf;
 uint16_t *output_buf;
 
 // Display global variables
-Arduino_DataBus *bus = new Arduino_HWSPI(2 /* DC */, 15 /* CS */, 14 /* SCK */, 13 /* MOSI */, 12 /* MISO */);
+/ NEW CORRECTED CODE:
+// Create an SPI instance for the display using the HSPI bus (Pins: SCK=14, MISO=12, MOSI=13, SS=15)
+SPIClass *display_spi = new SPIClass(HSPI);
+
+// Initialize Arduino_HWSPI with the SPI instance
+Arduino_DataBus *bus = new Arduino_HWSPI(2 /* DC */, 15 /* CS */, display_spi, true /* is_shared */);
 Arduino_GFX *gfx = new Arduino_ILI9341(bus);
 
 // SD Card reader is on a separate SPI
